@@ -85,6 +85,7 @@ NSLog(@"AVRController neues Profil");
 /* ********************************************** */
 /* *** SPI  ************************************* */
 /* ********************************************** */
+
 /*
 Bsp von http://forum.codemercs.com/viewtopic.php?f=2&t=1220&sid=ebd97b20e20ea96e8fa27497e58900ab
 IntPtr devHandle;
@@ -142,21 +143,6 @@ private void button4_Click(object sender, EventArgs e)
 
 
 
-- (void)WriteSchnittdatenArrayReportAktion:(NSNotification*)note
-{
-	NSLog(@"WriteSchnittdatenArrayReportAktion");
- //NSLog(@"WriteSchnittdatenArrayReportAktion note: %@",[[note userInfo]objectForKey:@"schnittdatenarray"]);
-	if ([[note userInfo]objectForKey:@"schnittdatenarray"])
-	{
-	//	[SchnittDatenArray setArray:[[note userInfo]objectForKey:@"schnittdatenarray"]];
-		
-		Stepperposition=0;
-		[self writeCNCAbschnitt];
-		
-	}
-
-
-}
 
 
 
@@ -179,9 +165,7 @@ private void button4_Click(object sender, EventArgs e)
             [self performSelector:@selector (USBOpen) withObject:NULL afterDelay:2];
             }
          }break;
-         case ANDERESEITEANFAHREN:
-         case OBERKANTEANFAHREN:
-         case HOMETASTE:
+          case HOMETASTE:
             
          {
             if (usbstatus==0)

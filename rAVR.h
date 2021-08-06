@@ -6,10 +6,10 @@
 //  Copyright 2008 Ruedi Heimlicher. All rights reserved.
 //
 #import <Cocoa/Cocoa.h>
-#import "rProfil_DS.h"
-#import "rDump_DS.h"
+//#import "rProfil_DS.h"
+//#import "rDump_DS.h"
 #import "rProfilGraph.h"
-#import "rCNC.h"
+//#import "rCNC.h"
 #import "rUtils.h"
 #import "datum.c"
 #import "version.c"

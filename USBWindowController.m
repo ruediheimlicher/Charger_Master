@@ -470,10 +470,6 @@ void DeviceRemoved(void *refCon, io_iterator_t iterator)
 
 	
 
-	[nc addObserver:self
-			 selector:@selector(WriteSchnittdatenArrayReportAktion:)
-				  name:@"writeschnittdatenarray"
-				object:nil];
 	
 	
 	
